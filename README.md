@@ -4,7 +4,7 @@
 
 🏆 **3rd place, [MKSafeNet Innovators Hackathon 2025](https://ma.edu.mk/en/news/251215-mksafenet-innovators-2025-concludes-winning-teams-awarded)**, built in two days by a team of three.
 
-![Dashboard](docs/screenshots/dashboard.png)
+(docs/screenshots/dashboard.png)
 
 ## The idea
 
@@ -17,7 +17,7 @@ Detection tools will always be one step behind generative AI. Trust Mirror train
 
 | Scenario | Feedback |
 |---|---|
-| ![Scenario](docs/screenshots/scenario.png) | ![Feedback](docs/screenshots/feedback.png) |
+| (docs/screenshots/scenario.png) | (docs/screenshots/feedback.png) |
 
 ## Features
 
