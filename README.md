@@ -73,7 +73,3 @@ backend/    Spring Boot API: controllers, services, JPA entities, security (JWT 
 frontend/   React app: dashboard, scenario view, Trust Mirror, Deception Playbook
 docker-compose.yml   PostgreSQL + backend + frontend
 ```
-
-## My role
-
-The idea for Trust Mirror was mine, and I built the backend: the REST API, authentication and authorization with Spring Security and JWT, the data model, and the scoring logic behind the vulnerability profiles. The frontend was prototyped with AI-assisted tooling to fit the two-day hackathon timeline.
