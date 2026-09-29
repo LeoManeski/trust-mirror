@@ -1,0 +1,141 @@
+.playbook-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.playbook-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.playbook-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.playbook-header h1 {
+  font-size: 2.5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.playbook-header .subheading {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.playbook-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.playbook-tab {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playbook-tab.active {
+  border-color: var(--primary);
+  background: rgba(16, 185, 129, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tab-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+}
+
+.tab-title-group {
+  display: flex;
+  align-items: center;
+}
+
+.tab-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.tab-content {
+  padding: 0 3rem 2.5rem 3rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.playbook-highlight,
+.playbook-tip {
+  background: rgba(16, 185, 129, 0.08);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: 0 12px 12px 0;
+  margin: 1.5rem 0;
+}
+
+.playbook-highlight strong,
+.playbook-tip strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.playbook-highlight ul,
+.playbook-tip ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.playbook-highlight li,
+.playbook-tip li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+.playbook-highlight li::before,
+.playbook-tip li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.tab-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+.tab-content p:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .playbook-container {
+    padding: 1rem;
+  }
+  .tab-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+}

@@ -1,0 +1,98 @@
+.trust-mirror-info {
+  min-height: 100vh;
+  background: var(--bg);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(6, 95, 70, 0.1) 0px, transparent 50%);
+  padding-top: 100px;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.info-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.info-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-family: 'Outfit', sans-serif;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.info-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.info-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.info-section p:last-child {
+  margin-bottom: 0;
+}
+
+.chart-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.chart-container h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.chart-explanation {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-family: 'Outfit', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .info-container {
+    padding: 1rem;
+  }
+  
+  .info-header h1 {
+    font-size: 2rem;
+  }
+  
+  .info-section {
+    padding: 1.5rem;
+  }
+}
+

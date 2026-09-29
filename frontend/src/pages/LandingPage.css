@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Outfit:wght@300;400&display=swap');
+
+:root {
+  --bg-dark: #0a0e1a;
+  --accent-green: #10b981;
+  --glass-bg: rgba(15, 23, 42, 0.8);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+}
+
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(46, 68, 60, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 30%);
+  display: flex;
+  flex-direction: column;
+  color: var(--text-main);
+  position: relative;
+}
+
+.landing-page .navbar {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+}
+
+.landing-page:has(.navbar) .hero-main {
+  padding-top: 100px;
+}
+
+.landing-nav {
+  position: fixed;
+  top: 15px; 
+  left: 20px; 
+  right: 20px; 
+  height: 80px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  padding: 0px;
+}
+
+.landingImg{
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.link-login {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-login:hover {
+  color: white;
+}
+
+.btn-signup {
+  background: white;
+  color: var(--bg-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn-signup:hover {
+  transform: scale(1.05);
+}
+
+.hero-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 10%;
+  gap: 4rem;
+}
+
+.hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+}
+
+.hero-title .accent {
+  color: var(--accent-green);
+}
+
+.hero-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+  color: var(--bg-dark);
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn-hero-primary{
+  background: white;
+}
+
+.btn-hero-secondary{
+  background: #10b981;
+}
+
+.btn-hero-primary:hover, .btn-hero-secondary:hover  {
+  transform: scale(1.05);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-card {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(10, 14, 26, 0) 100%);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pulse-circle {
+  width: 100px;
+  height: 100px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.5); }
+}
+
+@media (max-width: 968px) {
+  .hero-main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 80px;
+  }
+  .hero-subtitle { margin: 0 auto 2.5rem auto; }
+  .hero-actions { justify-content: center; }
+  .hero-visual { display: none; }
+  .hero-title { font-size: 2.5rem; }
+}

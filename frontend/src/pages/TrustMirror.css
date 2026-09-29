@@ -1,0 +1,442 @@
+.trust-mirror {
+  padding-top: 120px;
+  min-height: 100vh;
+  background: var(--bg);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(6, 95, 70, 0.1) 0px, transparent 50%);
+}
+
+.mirror-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.mirror-header {
+  margin-bottom: 3rem;
+  padding: 2.5rem;
+  border-radius: 24px;
+  color: white;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 95, 70, 0.2));
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.mirror-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.mirror-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-family: 'Outfit', sans-serif;
+}
+
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.overview-card {
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.overview-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.stat-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--primary);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.stat-icon-wrapper.success {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.stat-icon-wrapper.accuracy {
+  background: rgba(99, 102, 241, 0.2);
+  color: #6366f1;
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.stat-icon-wrapper.error {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value-large {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.quiz-results-section {
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.quiz-results-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.quiz-results-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.pie-chart-container h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.quiz-stats-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.quiz-stat-item {
+  padding: 1.5rem;
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.quiz-stat-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quiz-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.top-vulnerabilities {
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.top-vulnerabilities h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.section-description {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.vulnerability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vulnerability-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  transition: all 0.3s ease;
+}
+
+.vulnerability-item:hover {
+  background: rgba(16, 185, 129, 0.1);
+  transform: translateX(8px);
+}
+
+.vulnerability-rank {
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.vulnerability-content {
+  flex: 1;
+}
+
+.vulnerability-name {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.vulnerability-bar-container {
+  width: 100%;
+  height: 12px;
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.vulnerability-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vulnerability-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vulnerability-score {
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.vulnerability-level {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+}
+
+.vulnerability-level.high {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.vulnerability-level.medium {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--warning);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.vulnerability-level.low {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chart-card {
+  border-radius: 24px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+}
+
+.chart-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+.insights-section {
+  margin-top: 3rem;
+}
+
+.insights-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.insight-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.insight-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+.insight-card p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+}
+
+.error-content {
+  text-align: center;
+  padding: 3rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  max-width: 500px;
+}
+
+.error-icon {
+  font-size: 4rem;
+  color: var(--warning);
+  margin-bottom: 1rem;
+}
+
+.error-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.error-content p {
+  color: var(--text-muted);
+}
+
+.btn-back-top,
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.btn-back-top:hover,
+.btn-back:hover {
+  background: rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .quiz-results-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .mirror-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mirror-header h1 {
+    font-size: 2rem;
+  }
+  
+  .overview-stats {
+    grid-template-columns: 1fr;
+  }
+}
